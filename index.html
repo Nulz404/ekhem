@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<title>i love you</title>
+	</head>
+<body>
+	<h1 id="text"></h1>
+	<div class="tengah">
+	<button type="button" id="tombol" onclick="login()">KlikDong</button>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+	<script type="text/javascript">
+	function login() {
+	alert('halo, aku ada sesuatu nih');
+	alert('tapi login dulu ya');
+	alert('usernamenya: ayang\npasswordnya: ayang');
+	alert('okey, silahkan login...');
+	var usr = prompt("Masukan Username");
+	var pass = prompt("Masukan Password");
+	
+	if (usr != 'ayang') {
+		swal.fire('Gagal', 'Username atau Password Salah!', 'error');
+	} else if (pass != 'ayang') {
+		swal.fire('Gagal', 'Username atau Password Salah!', 'error');
+	} else {
+		swal.fire('Berhasil', 'Kamu Telah Login', 'success');
+		var i = 0, text;
+		text = "ikan hiu makan batu, i cant stop thinking about you...";
+		
+		function typing() {
+		if (i < text.length) {
+		document.getElementById('text').innerHTML += text.charAt(i);
+		i++;
+		setTimeout(typing, 200);
+    	}
+      } typing();
+      document.getElementById('tombol').innerHTML = `Ekheem..`;
+      window.setTimeout("window.close();", 12000)
+	}
+ }
+	</script>
+	<pre>Created By ChinuLz</pre>
+	<!--This script was created by ChinuLz(@chinulniboss)
+	 Copy and paste this script is strictly prohibited!
+	-->
+</body>
+</html>
